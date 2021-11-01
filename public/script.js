@@ -5,10 +5,6 @@ let taskList = ['Task 1: Lorem ipsum dolor',
 
 let tasksElem = document.querySelector('.tasks')
 
-// for (const task of taskList) {
-//     console.log(task);
-// }
-
 let taskListHtml = ``
 
 taskList.forEach(/*callback*/function(task, index) {
@@ -31,7 +27,7 @@ taskList.forEach(/*callback*/function(task, index) {
 tasksElem.addEventListener('click', function(event) {
     const checkInputElem = event.target.closest('.check-input[type=checkbox]')
     if (checkInputElem) {
-        // console.log(checkInputElem.dataset.index);
+        event.preventDefault()
         toggleTextDecor(checkInputElem)
         return
     }
@@ -66,9 +62,4 @@ function toggleCheckbox(textElem) {
     }
 }
 
-
-// tasksElem.onclick = function(event) {
-//     console.log(event.target);
-// }
-// console.log(taskListHtml);
 tasksElem.innerHTML = taskListHtml

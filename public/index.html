@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,38 @@
     <title>Some page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="redux.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="ui.js"></script>
 </head>
+
 <body>
     <!-- .container -->
     <div class="container">
         <h1>Task manager</h1>
         <!-- ul.tasks>li.task-card*5>(.task-name>({Task $:}+lorem))+button.edit{Edit}+button.delete{Delete} -->
         <ul class="tasks"></ul>
-        <input type="checkbox" class="check-input" id="">
     </div>
-    <script src="script.js"></script>
+
+    <template id="template">
+        <li class="task-card">
+            <div class="task-card__info">
+                <div class="task-card__input-block">
+                    <input class="check-input" type="checkbox">
+                    <div class="task-card__status"></div>
+                </div>
+                <div class="task-name"></div>
+            </div>
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </li>
+    </template>
+    <!-- <script src="script.js"></script> -->
+    <script src="initial-render.js"></script>
+    <script src="script-with-state.js"></script>
 </body>
+
 </html>
