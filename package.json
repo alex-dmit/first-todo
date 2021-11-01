@@ -1,0 +1,23 @@
+{
+  "name": "first-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-dmit/first-todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-dmit/first-todo/issues"
+  },
+  "homepage": "https://github.com/alex-dmit/first-todo#readme",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
+}
